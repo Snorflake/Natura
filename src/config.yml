@@ -1,0 +1,55 @@
+# YAML configuration for Natura
+
+# snow-layering - Whether or not snowfall will be layered. This will change any
+# layers of snow and stack layers. To disable, set snow-rate to 0.0, or remove
+# all strings from the array.
+# Default is set to the overworld.
+snow-layering: ['world']
+
+# snow-rate - How quickly snow will pile up. Frequency is inverse exponential.
+# This will affect all snowfall.
+# Default is 100%
+snow-rate: 1.0
+
+# snow-height - How high snow layers will stack naturally. Maximum is 7,
+# Minimum is 1.
+# Default is set to 6.
+snow-height: 6
+
+# rain-rate - Sets the likelihood of it raining. 100% is normal rate, and 0%
+# will disable raining. Setting it to more than 1.0 will enable it to always 
+# rain.
+# Default is 100%
+rain-rate: 1.0
+
+# thunder-rate - Sets the likelihood of it thundering. 100% is the normal 
+# rate, and 0% will disable thunder. Setting it to more than 1.0 will 
+# enable it to always thunder.
+# Default is 100%
+thunder-rate: 1.0
+
+# lightning-rate - Sets the likelihood of lightning striking. Maximum is 100%,
+# which is the normal rate, and 0% will disable lightning.
+# Default is 100%
+lightning-rate: 1.0
+
+# leaf-decay-modifier - A modifier which affects the chance of a leaf decaying.
+# If this is set to 0.0, leafs will never decay, where 1.0 is normal decay rate
+# Default is 100% chance of decaying.
+leaf-decay-modifier: 1.0
+
+# ice-form-modifier - A modifier which will affect the chance of ice forming.
+# 0.0 is equivalent to 0%, and 1.0 is equivalent to 100%, which is the normal
+# forming rate.
+# Default is 100% chance of forming ice.
+ice-form-modifier: 1.0
+
+# explosion-yield-modifier - Modifies the yield dropped from explosions. If
+# the pre-set yield is 80%, and the modifier is 10%, it will drop 8% yield.
+# Default is 100%, or normal.
+explosion-yield-modifier: 1.0
+
+# sapling-plant-modifier - Sets the chance for a dropped sapling to plant 
+# itself on dirt or grass. You can set this to 0.0 to disable this feature.
+# Default is 50% chance.
+sapling-plant-modifier: 0.5

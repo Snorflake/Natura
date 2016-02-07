@@ -1,0 +1,8 @@
+name: Natura
+main: io.mooshe.natura.MainPlugin
+version: 1.2
+commands:
+  natura:
+    description: Used to define setting values for Natura.
+    usage: /natura <setting> <value>
+    permission: natura.admin

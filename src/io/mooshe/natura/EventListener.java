@@ -46,18 +46,18 @@ public class EventListener implements Listener {
 				(dt != Material.DIRT && dt != Material.GRASS))
 			return;
 		
-		float r = (float) plugin.cfg.getDouble("sapling-plant-modifier", 0d);
+		float r = (float) plugin.cfg.getDouble("sapling-plant-modifier", 0);
 		if(random.nextFloat() > r)
 			return;
 		
 		BlockState s = point.getState();
 		s.setType(item.getType());
 		s.setRawData(item.getData().getData());
-		BlockGrowEvent e = new BlockGrowEvent(point, s);
+		BlockFormEvent e = new BlockFormEvent(point, s);
 		Bukkit.getServer().getPluginManager().callEvent(e);
 		if(e.isCancelled())
 			return;
-		s.update();
+		s.update(true);
 	}
 	
 	@EventHandler(ignoreCancelled=false, priority=EventPriority.HIGHEST)

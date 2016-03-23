@@ -21,8 +21,7 @@ public class MainPlugin extends JavaPlugin {
 		file = new File(getDataFolder(), "config.yml");
 		try {
 			if(!file.exists()) {
-				getLogger().warning("Could not find configuration file; " +
-						"loading defaults");
+				getLogger().warning("Could not find configuration file; loading defaults");
 				getConfig().getDefaults().options().copyDefaults(true);
 				saveDefaultConfig();
 			}
